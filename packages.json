@@ -1,155 +1,115 @@
 [
   {
-    "id": "full-body-basic",
-    "name": "Full Body Basic",
-    "icon": "🩺",
-    "description": "Essential health screening for overall wellness monitoring.",
-    "price": 799,
-    "featured": false,
-    "badge": null,
-    "tests": [
-      "Complete Blood Count (CBC)",
-      "Blood Sugar (Fasting & PP)",
-      "Urine Routine",
-      "Lipid Profile",
-      "Liver Function Test (LFT)",
-      "Kidney Function Test (KFT)"
-    ]
-  },
-  {
-    "id": "full-body-advanced",
-    "name": "Full Body Advanced",
-    "icon": "🔬",
-    "description": "Complete health evaluation with additional hormone & vitamin tests.",
-    "price": 1499,
+    "id": "package-3300",
+    "name": "Package ₹3300",
+    "icon": "🏆",
+    "description": "Most comprehensive panel — 12 tests covering blood, diabetes, liver, kidney, thyroid, vitamins & minerals.",
+    "price": 3300,
     "featured": true,
-    "badge": "⭐ Popular",
+    "badge": "⭐ Most Complete",
     "tests": [
-      "Everything in Basic",
-      "Thyroid Profile (TSH, T3, T4)",
-      "HbA1c (Diabetes Control)",
-      "Vitamin B12 & D3",
-      "Uric Acid",
-      "Iron Studies",
-      "Chest X-Ray"
+      "CBC",
+      "VIT-B12",
+      "FBS & HbA1c",
+      "LFT (TB, DB, ALT, AST, TP)",
+      "ESR",
+      "RFT",
+      "Urine Exam",
+      "Lipid Profile",
+      "Free TFT",
+      "Calcium",
+      "Phosphorus",
+      "VIT-D3"
     ]
   },
   {
-    "id": "diabetes-care",
-    "name": "Diabetes Care",
-    "icon": "🩸",
-    "description": "Detailed monitoring package for diabetics & high-risk individuals.",
-    "price": 699,
-    "featured": false,
-    "badge": null,
-    "tests": [
-      "Fasting & PP Blood Sugar",
-      "HbA1c",
-      "Kidney Function Test",
-      "Urine Microalbumin",
-      "Lipid Profile"
-    ]
-  },
-  {
-    "id": "thyroid-hormones",
-    "name": "Thyroid & Hormones",
-    "icon": "⚗️",
-    "description": "Comprehensive hormonal assessment for thyroid disorders & imbalances.",
-    "price": 899,
-    "featured": false,
-    "badge": null,
-    "tests": [
-      "TSH, T3, T4",
-      "Anti-TPO Antibodies",
-      "FSH & LH",
-      "Prolactin",
-      "Testosterone / Estrogen"
-    ]
-  },
-  {
-    "id": "heart-health",
-    "name": "Heart Health",
-    "icon": "❤️",
-    "description": "Cardiac risk assessment for preventive heart care.",
-    "price": 999,
-    "featured": false,
-    "badge": null,
-    "tests": [
-      "Lipid Profile (Full)",
-      "hs-CRP",
-      "Homocysteine",
-      "ECG",
-      "Blood Pressure Screening",
-      "Blood Sugar"
-    ]
-  },
-  {
-    "id": "womens-wellness",
-    "name": "Women's Wellness",
-    "icon": "🌸",
-    "description": "Designed specifically for women's health needs at every life stage.",
-    "price": 1199,
-    "featured": false,
-    "badge": null,
-    "tests": [
-      "CBC & Blood Sugar",
-      "Thyroid Profile",
-      "Vitamin B12 & D3",
-      "Iron Studies (Ferritin)",
-      "FSH, LH, Prolactin",
-      "Pap Smear (optional)"
-    ]
-  },
-  {
-    "id": "senior-citizen",
-    "name": "Senior Citizen",
-    "icon": "🧓",
-    "description": "Tailored screening for age-related conditions in adults 60+.",
-    "price": 1299,
-    "featured": false,
-    "badge": null,
-    "tests": [
-      "Full Blood Count",
-      "Blood Sugar & HbA1c",
-      "Kidney & Liver Function",
-      "Vitamin D & B12",
-      "Bone Profile (Calcium)",
-      "PSA / CA-125 (optional)"
-    ]
-  },
-  {
-    "id": "pre-employment",
-    "name": "Pre-Employment",
-    "icon": "💼",
-    "description": "Standard tests required for employment medical fitness certificates.",
-    "price": 499,
+    "id": "package-2500",
+    "name": "Package ₹2500",
+    "icon": "🔬",
+    "description": "Comprehensive wellness panel — 12 tests covering blood, diabetes, liver, kidney, thyroid, vitamins & minerals.",
+    "price": 2500,
     "featured": false,
     "badge": null,
     "tests": [
       "CBC",
-      "Blood Group & RH Typing",
-      "Blood Sugar",
-      "Urine Routine",
-      "Chest X-Ray",
-      "Eye & BP Screening"
+      "VIT-B12",
+      "FBS & HbA1c",
+      "LFT (TB, DB, ALT, AST, TP)",
+      "ESR",
+      "RFT",
+      "Urine Exam",
+      "Lipid Profile",
+      "Free TFT",
+      "Calcium",
+      "Phosphorus",
+      "VIT-D3"
     ]
   },
   {
-    "id": "individual-tests",
-    "name": "Individual Tests",
-    "icon": "🧪",
-    "description": "Book any single test — CBC, LFT, KFT, Urine, Lipid Profile & more.",
-    "price": 80,
-    "priceLabel": "₹80+ / test",
+    "id": "package-1700",
+    "name": "Package ₹1700",
+    "icon": "🩺",
+    "description": "Mid-range health checkup — 11 tests covering blood, diabetes, liver, kidney, thyroid & vitamins.",
+    "price": 1700,
     "featured": false,
     "badge": null,
     "tests": [
-      "CBC – ₹150",
-      "Blood Sugar (F/PP) – ₹80",
-      "Lipid Profile – ₹350",
-      "Thyroid (TSH) – ₹250",
-      "Urine Routine – ₹100",
-      "& many more…"
+      "CBC",
+      "FBS & HbA1c",
+      "LFT (TB, DB, ALT, AST, TP)",
+      "ESR",
+      "RFT (BUN, UA, CREA)",
+      "Urine Exam",
+      "Lipid Profile",
+      "TFT (TSH)",
+      "Calcium",
+      "Phosphorus",
+      "VIT-D3"
+    ]
+  },
+  {
+    "id": "package-1000",
+    "name": "Package ₹1000",
+    "icon": "🩸",
+    "description": "Essential baseline screening — 10 key tests covering blood, diabetes, liver, kidney, thyroid & minerals.",
+    "price": 1000,
+    "featured": false,
+    "badge": null,
+    "tests": [
+      "CBC",
+      "FBS",
+      "LFT (TB, DB, ALT, AST, TP)",
+      "ESR",
+      "RFT (BUN, UA, CREA)",
+      "Urine Exam",
+      "Lipid Profile",
+      "TFT (TSH)",
+      "Calcium",
+      "Phosphorus"
+    ]
+  },
+  {
+    "id": "package-1500",
+    "name": "Package ₹1500",
+    "icon": "💊",
+    "description": "Balanced health checkup — 13 tests including hemogram, diabetes, liver, kidney, CRP, lipids & vitamin D.",
+    "price": 1500,
+    "featured": false,
+    "badge": null,
+    "tests": [
+      "Hemogram",
+      "Vitamin B12",
+      "Glucose",
+      "HbA1c",
+      "LFT",
+      "ESR",
+      "CRP",
+      "RFT",
+      "Urine Examination",
+      "Lipid Profile",
+      "Calcium",
+      "Vitamin D3",
+      "TFT"
     ]
   }
 ]
