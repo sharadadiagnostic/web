@@ -480,4 +480,16 @@
       const io = new IntersectionObserver((entries) => {
         entries.forEach((e, i) => {
           if (e.isIntersecting) {
-            setTimeout(() => e.target.classList.add('visible'), i * 70)
+            setTimeout(() => e.target.classList.add('visible'), i * 70);
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.fade-up:not(.visible)').forEach(el => io.observe(el));
+    }
+
+    loadPackages();
+    observeFadeUps();
+  </script>
+</body>
+</html>
