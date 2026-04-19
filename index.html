@@ -95,6 +95,10 @@
     .package-card.featured .package-footer { border-top-color: rgba(26,92,58,0.2); }
     .package-price { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--green); }
     .package-price span { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+    .package-mrp { font-size: 0.78rem; color: var(--muted); text-decoration: line-through; margin-top: 1px; }
+    .package-discount { display: inline-block; background: #fff0f0; color: #c0392b; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 50px; margin-top: 4px; }
+    .package-card.featured .package-discount { background: rgba(201,151,43,0.15); color: var(--gold); }
+    .package-badge.discount-badge { background: #c0392b; }
     .btn-book { background: var(--green); color: white; border: none; padding: 9px 18px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.15s; display: inline-block; }
     .btn-book:hover { background: var(--green-mid); transform: scale(1.04); }
 
@@ -299,9 +303,9 @@
         <div class="contact-card-icon">📍</div>
         <div><div class="contact-card-label">Address</div><div class="contact-card-value">Bamane Tower, 3rd Floor, Opp. Fire Brigade, Khanapur Road, Govaves, Belagavi</div></div>
       </a>
-      <a class="contact-card" href="mailto:sharadadiagnostic@gmail.com">
+      <a class="contact-card" href="/cdn-cgi/l/email-protection#83f0ebe2f1e2e7e2e7eae2e4edecf0f7eae0c3e4eee2eaefade0ecee">
         <div class="contact-card-icon">✉️</div>
-        <div><div class="contact-card-label">Email</div><div class="contact-card-value">sharadadiagnostic@gmail.com</div></div>
+        <div><div class="contact-card-label">Email</div><div class="contact-card-value"><span class="__cf_email__" data-cfemail="fb88939a899a9f9a9f929a9c9594888f9298bb9c969a9297d5989496">[email&#160;protected]</span></div></div>
       </a>
             <div class="contact-card" style="cursor:default;">
         <div class="contact-card-icon">🕐</div>
@@ -347,7 +351,10 @@
 
         <!-- Price -->
         <div class="modal-price-box">
-          <div class="modal-price-box-label">Package Price</div>
+          <div>
+            <div class="modal-price-box-label">Package Price</div>
+            <div id="modal-mrp" style="margin-top:4px;"></div>
+          </div>
           <div class="modal-price-box-value" id="modal-price-value"></div>
         </div>
 
@@ -365,7 +372,7 @@
     </div>
   </div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // ── Google Form config ────────────────────────────────────────────
     // To update the form URL or field ID, change only these two lines:
     const FORM_BASE_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScSfMk9EIY_KkT4LTtavDM0OnAeU5pU4GgefaKdFkDAQPqpAQ/viewform';
@@ -431,7 +438,13 @@
         const priceHtml = pkg.priceLabel
           ? pkg.priceLabel
           : `₹${Number(pkg.price).toLocaleString('en-IN')} <span>/ person</span>`;
-        const badgeHtml  = pkg.badge ? `<div class="package-badge">${escHtml(pkg.badge)}</div>` : '';
+        const mrpHtml = pkg.mrpTotal
+          ? `<div class="package-mrp">MRP ₹${Number(pkg.mrpTotal).toLocaleString('en-IN')}</div>
+             <div class="package-discount">Save ${pkg.discountPercent}%</div>`
+          : '';
+        const badgeHtml = pkg.badge
+          ? `<div class="package-badge ${pkg.discountPercent && pkg.badge !== '⭐ Most Popular' ? 'discount-badge' : ''}">${escHtml(pkg.badge)}</div>`
+          : '';
         const testsHtml  = (pkg.tests || []).map(t => `<li>${escHtml(t)}</li>`).join('');
 
         return `
@@ -442,7 +455,10 @@
             <p class="package-desc">${escHtml(pkg.description)}</p>
             <ul class="package-tests">${testsHtml}</ul>
             <div class="package-footer">
-              <div class="package-price">${priceHtml}</div>
+              <div>
+                <div class="package-price">${priceHtml}</div>
+                ${mrpHtml}
+              </div>
               <button class="btn-book" data-idx="${idx}">Book</button>
             </div>
           </div>`;
@@ -468,16 +484,4 @@
       const io = new IntersectionObserver((entries) => {
         entries.forEach((e, i) => {
           if (e.isIntersecting) {
-            setTimeout(() => e.target.classList.add('visible'), i * 70);
-            io.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.08 });
-      document.querySelectorAll('.fade-up:not(.visible)').forEach(el => io.observe(el));
-    }
-
-    loadPackages();
-    observeFadeUps();
-  </script>
-</body>
-</html>
+            setTimeout(() => e.target.classList.add('visible'), i * 70)
